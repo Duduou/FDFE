@@ -32,34 +32,23 @@ function Form({ onAddItem }) {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
         <label>Nome</label>
-        <input
-          type="text"
-          {...register('name')}
-        />
+        <input type="text" {...register('name')}/>
         {errors.name && <p>{errors.name.message}</p>}
       </div>
 
       <div>
         <label>Email</label>
-        <input
-          type="email"
-          {...register('email')}
-        />
+        <input type="email" {...register('email')}/>
         {errors.email && <p>{errors.email.message}</p>}
       </div>
 
       <div>
         <label>Idade</label>
-        <input
-          type="number"
-          {...register('age', { valueAsNumber: true })}
-        />
+        <input type="number" {...register('age', { valueAsNumber: true })} />
         {errors.age && <p>{errors.age.message}</p>}
       </div>
 
-      <button
-        type="submit"
-      >
+      <button type="submit">
         Cadastrar
       </button>
     </form>
